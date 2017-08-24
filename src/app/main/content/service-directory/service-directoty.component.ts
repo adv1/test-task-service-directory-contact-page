@@ -5,26 +5,7 @@ import { ServiceDirectoryApiService } from './service-directory-api.service';
 
 @Component({
   selector: 'service-directory',
-  template: `
-  <div class="container">
-    <div class="d-flex" id="service-title">
-      <h2>Service Directory</h2>
-      <div class="service-title-button">
-        <button><p>Add new service</p></button>
-      </div>
-    </div>
-    <div class="service-content">
-      <div id="list" *ngFor="let val of services">
-        <div id="list-item">
-          <div id="img">
-            <img src="{{ val.icon }}" />
-          </div>
-          <div id="title"> {{ val.title }}</div>
-        </div>
-      </div>
-    </div>
-    </div>
-    `,
+  templateUrl: './service-directory.component.html',
   styleUrls: ['./service-directory.component.scss']
 })
 
