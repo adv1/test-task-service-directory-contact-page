@@ -5,9 +5,8 @@ import { Http, RequestOptions, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class DirectoryService {
+export class ServiceDirectoryApiService {
   private _requestUrlServices = 'http://504080.com/api/v1/services/categories';
-  private _requestUrlEnquiryTypes = 'http://504080.com/api/v1/directories/enquiry-types';
 
   constructor (
     private _http: Http
@@ -20,10 +19,4 @@ export class DirectoryService {
     return this._http.get(this._requestUrlServices, options)
       .map((res: Response) => res.json());
   }
-
-  public getEnquiryTypes() {
-    return this._http.get(this._requestUrlEnquiryTypes)
-      .map((res: Response) => res.json());
-  }
-
 }

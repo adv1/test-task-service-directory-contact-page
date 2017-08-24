@@ -1,7 +1,7 @@
 'use strict';
 
 import { Component, OnInit } from '@angular/core';
-import { DirectoryService } from '../../../shared/directory.service';
+import { ServiceDirectoryApiService } from './service-directory-api.service';
 
 @Component({
   selector: 'service-directory',
@@ -32,7 +32,7 @@ export class ServiceDirectoryComponent implements OnInit {
 
   public services = [];
 
-  constructor(private _service: DirectoryService) {}
+  constructor(private _service: ServiceDirectoryApiService) {}
 
   ngOnInit(): void {
     this.getServices();

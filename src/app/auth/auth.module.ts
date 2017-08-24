@@ -6,6 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MdButtonModule, MdIconModule, MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AuthApiService } from './auth-api.service';
+
 import { AuthComponent } from './auth.component';
 import { SignUpComponent } from './sing-up/sign-up.component';
 import { authRoutes } from './auth.routes';
@@ -26,5 +29,6 @@ import { authRoutes } from './auth.routes';
     FormsModule,
     RouterModule.forRoot(authRoutes),
   ],
+  providers: [ AuthApiService ]
 })
 export class AuthModule {}
