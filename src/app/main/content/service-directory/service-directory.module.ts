@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
-import { ServiceDirectoryApiService } from './service-directory-api.service';
+import { ServicesListApiService } from './services-list.api.service';
 
 import { ServiceDirectoryComponent } from './service-directoty.component';
 
@@ -16,6 +16,6 @@ import { ServiceDirectoryComponent } from './service-directoty.component';
     CommonModule,
     HttpModule
   ],
-  providers: [ ServiceDirectoryApiService ],
+  providers: [ ServicesListApiService ],
 })
 export class ServiceDirectoryModule {}

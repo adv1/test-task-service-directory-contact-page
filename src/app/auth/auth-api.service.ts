@@ -15,5 +15,6 @@ export class AuthApiService {
   public getEnquiryTypes() {
     return this._http.get(this._requestUrlEnquiryTypes)
       .map((res: Response) => res.json());
+
   }
 }

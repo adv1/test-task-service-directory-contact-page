@@ -1,7 +1,7 @@
 'use strict';
 
 import { Component, OnInit } from '@angular/core';
-import { ServiceDirectoryApiService } from './service-directory-api.service';
+import { ServicesListApiService } from './services-list.api.service';
 
 @Component({
   selector: 'service-directory',
@@ -13,14 +13,14 @@ export class ServiceDirectoryComponent implements OnInit {
 
   public services = [];
 
-  constructor(private _service: ServiceDirectoryApiService) {}
+  constructor(private _service: ServicesListApiService) {}
 
-  ngOnInit(): void {
-    this.getServices();
+  public ngOnInit(): void {
+    this._getServicesList();
   }
 
-  public getServices() {
-    this._service.getServices()
+  private _getServicesList() {
+    this._service.getServicesList()
       .subscribe(res => {
         this.services.push(...res.data);
       });
