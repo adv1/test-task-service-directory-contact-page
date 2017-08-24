@@ -1,0 +1,38 @@
+<div class="d-flex" id="header">
+
+  <div class="d-flex" id="header-content">
+
+    <div class="d-flex" id="header-brand">
+      <img src="assets/images/logo-img.svg">
+    </div>
+
+    <div class="d-flex" id="header-search">
+      <form class="d-flex form-inline">
+        <input #newHero
+          (blur)="newHero.value=''"
+          class="form-control mr-sm-2"
+          type="text"
+          placeholder="Search"
+          aria-label="Search">
+      </form>
+    </div>
+
+    <div class="d-flex" id="header-other">
+      <div class="header-other-buttons">
+        <i class="material-icons">speaker_notes</i>
+        <i class="material-icons" id="alert">add_alert</i>
+      </div>
+      <div class="header-other-profile">
+        <div class="d-flex" id="profile-icon" [mdMenuTriggerFor]="headerOtherMenu">
+          <i class="material-icons">account_box</i>
+          <span>Mark</span>
+        </div>
+        <md-menu #headerOtherMenu="mdMenu">
+          <button md-menu-item disabled> Settings </button>
+          <button md-menu-item routerLink="/signup"> Sign out </button>
+        </md-menu>
+      </div>
+    </div>
+  </div>
+
+</div>

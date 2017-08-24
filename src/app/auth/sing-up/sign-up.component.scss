@@ -1,0 +1,211 @@
+#container {
+  min-width: 970px;
+  .land-1 {
+    height: 510px;
+    background-image: url("../../../assets/images/landing-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #f3f4f6;
+    text-align: center;
+    h1 {
+      font-family: "Proxima Nova Regular",sans-serif;
+      font-size: 50px;
+      margin-top: 60px;
+      color: #f3f4f6;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    p {
+      font-family: "Proxima Nova Regular",sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    .land-1-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      .header-brand {
+        width: 131px;
+      }
+      .header-button {
+        height: 35px;
+        button {
+          background-color: #87b448;
+          border: none;
+          outline: none;
+          color: #f3f4f6;
+          border-radius: 5px;
+          height: 35px;
+          p {
+            font-size: 90%;
+            margin: 0.55em;
+            font-weight: 600;
+            line-height: 5px;
+          }
+        }
+      }
+    }
+  }
+  .land-2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-image: url("../../../assets/images/landing-bg-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    border-bottom: 1px solid #e0e2e6;
+
+    #body {
+      border-radius: 5px;
+      margin-top: -100px;
+      align-self: center;
+      width: 760px;
+      background-color: white;
+      flex-direction: column;
+      p {
+        color: #b7bfcd;
+        align-self: flex-start;
+        padding-left: 15px;
+        padding-top: 15px;
+      }
+      #body-top {
+        padding: 1px 15px;
+        label {
+          float: left;
+        }
+        #inputOther {
+          margin-top: 10px;
+        }
+      }
+      #body-center {
+        display: flex;
+        justify-content: space-between;
+        padding: 1px 15px;
+        .form-group {
+          width: 50%;
+          label {
+            float: left;
+          }
+        }
+        #first-name {
+          padding-right: 15px;
+        }
+        #email {
+          padding-left: 15px;
+        }
+      }
+      #body-bottom {
+        padding: 1px 15px;
+        .form-group {
+          label {
+            float: left;
+          }
+        }
+        #description {
+          label {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+          }
+          #inputDescription {
+            line-height: 24px;
+            min-height: 122px;
+            max-height: none;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-all;
+          }
+        }
+        .add-image {
+          width: 132px;
+          height: 132px;
+          border: 1px solid #e0e2e6;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          background-color: #f7f7f7;
+          #text-add-img {
+            height: 23px;
+            font-size: 16px;
+            text-align: center;
+            color: #6a7383;
+            margin-top: 30px;
+            font-weight: 500;
+          }
+          #chose-file-text {
+            span {
+              text-align: center;
+              font-size: 12px;
+              color: #c2c2c4;
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      width: 760px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      align-self: center;
+      button {
+        background-color: #87B448;
+        height: 52px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  #land-3 {
+    font-family: "Proxima Nova Regular",sans-serif;
+    height: 414px;
+    display: flex;
+    flex-direction: column;
+    padding: 73px 82px 90px;
+    max-width: 1440px;
+    h1 {
+      align-self: center;
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 38px;
+    }
+    #land-3-text {
+      display: flex;
+      align-self: center;
+      p {
+        width: 50%;
+        margin: 0 0 10px;
+      }
+      #left-text {
+        padding-right: 30px;
+        float: left;
+      }
+
+      #right-text {
+        padding-left: 38px;
+      }
+    }
+  }
+  #footer {
+    height: 88px;
+    border-top: 1px solid #e0e2e6;
+    color: #b7bfcd;
+    font-size: 12px;
+    line-height: 88px;
+    outline-style: none;
+    justify-content: space-between;
+    #pull-left {
+      padding-left: 82px;
+    }
+    #pull-right {
+      padding-right: 82px;
+      p {
+        margin-left: 21px;
+      }
+    }
+  }
+}
+

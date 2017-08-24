@@ -1,0 +1,92 @@
+#container {
+  flex-direction: column;
+  min-width: 970px;
+
+  #content {
+    justify-content: center;
+    min-width: 1150px;
+    #left {
+      min-width: 210px;
+      flex-direction: column;
+      #list-group {
+        width: 210px;
+        height: 52px;
+        outline: none;
+        flex-direction: column;
+        margin-bottom: 200px;
+
+        .list-group-item {
+          outline: none;
+          border-left: none;
+          border-right: none;
+          height: auto;
+          a {
+            outline: none;
+            color: gray;
+            display: flex;
+            justify-content: flex-start;
+          }
+          a:hover {
+            outline: none;
+            color: #87B448;
+            text-decoration: none;
+          }
+          .icon {
+            margin-right: 7px;
+          }
+        }
+      }
+      #advertising-left {
+        flex-direction: column;
+        color: gray;
+        img {
+          margin-bottom: 25px;
+        }
+        border-bottom: 1px solid lightgrey;
+      }
+      #companies-left {
+        margin-top: 30px;
+        height: 100px;
+        border-bottom: 1px solid lightgrey;
+        color: gray;
+        .content-see-all {
+          color: black;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    #center {
+      flex-wrap: wrap;
+      #router-block {
+        margin: 10px;
+        width: 950px;
+        min-width: 300px;
+        flex-wrap: wrap;
+      }
+    }
+
+    #right {
+      width: 212px;
+      min-width: 212px;
+      font-size: 85%;
+      flex-direction: column;
+      #right-nav-people, #right-nav-products {
+        height: 100px;
+        border-bottom: 1px solid lightgrey;
+        margin-top: 15px;
+        color: gray;
+      }
+      .content-see-all {
+        color: black;
+        margin-left: 20px;
+      }
+      #advertising-right {
+        margin-top: 100px;
+        flex-direction: column;
+        color: gray;
+      }
+
+    }
+  }
+}
