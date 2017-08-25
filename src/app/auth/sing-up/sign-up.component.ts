@@ -15,20 +15,43 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class SignUpComponent implements OnInit {
   public enquiry_types = [];
   public currentType: string = '';
-  public form: FormGroup;
+
+  public signUpForm: FormGroup;
+  public enquiry_type: string = '';
+  public inputOther: string = '';
+  public inputName: string = '';
+  public inputEmail: string = '';
+  public inputSubject: string = '';
+  public inputDescription: string = '';
 
   constructor(
     private _service: AuthApiService,
-    private fb: FormBuilder
+    private _fb: FormBuilder
   ) {}
 
   public ngOnInit() {
     this._getEnquiryTypes();
-    this.form = this.fb.group({
-      email: new FormControl('', [
-        Validators.required,
-      ])
+    this._createForm();
+  }
+
+  private _createForm() {
+    this.signUpForm = this._fb.group({
+      enquiry_type: '',
+      inputOther: '',
+      inputName: ['', Validators.required ],
+      inputEmail: ['', Validators.required ],
+      inputSubject: ['', Validators.required ],
+      inputDescription: ['', Validators.compose([Validators.required, Validators.minLength(1), Validators.maxLength(1000)]) ],
     });
+  }
+
+  public signUp(userInfo) {
+    this.enquiry_types = userInfo.enquiry_type;
+    this.inputOther = userInfo.inputOther;
+    this.inputName = userInfo.inputName;
+    this.inputEmail = userInfo.inputEmail;
+    this.inputSubject = userInfo.inputSubject;
+    this.inputDescription = userInfo.inputDescription;
   }
 
   private _getEnquiryTypes() {

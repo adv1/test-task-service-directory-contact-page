@@ -17,46 +17,57 @@
   <div class="land-2" id="land-2">
     <div class="d-flex" id="body">
       <p>Fields marked '*' are required</p>
-      <form >
+      <form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)">
         <div id="body-top">
           <div class="form-group">
             <label for="enquiry_type">Enquiry type *</label>
-            <select class="form-control" id="enquiry_type" name="enquiry_type" [(ngModel)]="currentType">
-              <option *ngFor="let type of enquiry_types">
-                {{ type.name }}
+            <select class="form-control"
+                    id="enquiry_type"
+                    name="enquiry_type"
+                    [(ngModel)]="currentType"
+                    formControlName="enquiry_type">
+              <option *ngFor="let currentEnquiryType of enquiry_types">
+                {{ currentEnquiryType.name }}
               </option>
             </select>
-            <input type="other"
+            <input type="text"
                       class="form-control"
                       id="inputOther"
+                      name="inputOther"
                       placeholder="Other"
-                      *ngIf="currentType === 'Other'">
+                      *ngIf="currentType === 'Other'"
+                      formControlName="inputOther">
           </div>
         </div>
 
         <div id="body-center">
           <div class="form-group" id="first-name">
-            <label for="InputName">Name *</label>
-            <input type="first-name"
-                    class="form-control"
-                    id="InputName"
-                    placeholder="Dentist">
+            <label for="inputName">Name *</label>
+            <input class="form-control"
+                   id="inputName"
+                   name="inputName"
+                   placeholder="Dentist"
+                   formControlName="inputName">
           </div>
-          <div class="form-group" id="email"  [formGroup]="form">
-            <label for="InputEmail">Email *</label>
+          <div class="form-group" id="email">
+            <label for="inputEmail">Email *</label>
             <input type="email"
                    class="form-control"
-                   id="InputEmail"
-                   placeholder="rachelm@gmail.com">
+                   id="inputEmail"
+                   name="inputEmail"
+                   placeholder="rachelm@gmail.com"
+                   formControlName="inputEmail">
           </div>
         </div>
 
         <div id="body-bottom">
           <div class="form-group" id="subject">
-            <label for="InputSubject">Subject *</label>
-            <input type="subject"
+            <label for="inputSubject">Subject *</label>
+            <input type="text"
                    class="form-control"
-                   id="InputSubject">
+                   id="inputSubject"
+                   name="inputSubject"
+                   formControlName="inputSubject">
           </div>
           <div class="form-group" id="description">
             <label for="inputDescription">
@@ -65,7 +76,10 @@
             </label>
             <textarea type="description"
                       class="form-control"
-                      id="inputDescription"></textarea>
+                      id="inputDescription"
+                      name="inputDescription"
+                      formControlName="inputDescription">
+            </textarea>
           </div>
 
           <div class="add-image">
@@ -89,7 +103,7 @@
     </div>
 
     <div class="bottom">
-      <button type="submit" class="btn btn-success" routerLink="/feed">Sign up now</button>
+      <button type="submit" class="btn btn-success" routerLink="/feed" [disabled]="!signUpForm.valid">Sign up now</button>
     </div>
 
   </div>
