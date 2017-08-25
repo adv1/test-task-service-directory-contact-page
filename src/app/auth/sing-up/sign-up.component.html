@@ -1,5 +1,6 @@
 <div id="container">
   <div class="land-1" id="land-1">
+
     <div class="land-1-header">
       <div class="header-brand" id="header-brand">
         <img src="assets/images/logo-img.svg">
@@ -16,7 +17,7 @@
   <div class="land-2" id="land-2">
     <div class="d-flex" id="body">
       <p>Fields marked '*' are required</p>
-      <form>
+      <form >
         <div id="body-top">
           <div class="form-group">
             <label for="enquiry_type">Enquiry type *</label>
@@ -41,7 +42,7 @@
                     id="InputName"
                     placeholder="Dentist">
           </div>
-          <div class="form-group" id="email">
+          <div class="form-group" id="email"  [formGroup]="form">
             <label for="InputEmail">Email *</label>
             <input type="email"
                    class="form-control"

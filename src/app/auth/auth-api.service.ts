@@ -3,6 +3,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AuthApiService {
@@ -14,7 +15,7 @@ export class AuthApiService {
 
   public getEnquiryTypes() {
     return this._http.get(this._requestUrlEnquiryTypes)
-      .map((res: Response) => res.json());
-
+      .map((res: Response) => res.json())
+      .toPromise();
   }
 }

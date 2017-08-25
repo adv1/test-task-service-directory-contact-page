@@ -2,7 +2,7 @@
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MdButtonModule, MdIconModule, MdInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +27,7 @@ import { authRoutes } from './auth.routes';
     MdButtonModule,
     MdIconModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(authRoutes),
   ],
   providers: [ AuthApiService ]
